@@ -27,7 +27,7 @@ const Login = () => {
           {/* <a className="btn-deco" href="/main">
             로그인
           </a> */}
-          <Link className="btn-deco" to="/main">
+          <Link className="btn-deco" to="/hyoeunjung-main">
             로그인
           </Link>
         </button>

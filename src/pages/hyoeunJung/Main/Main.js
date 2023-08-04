@@ -7,14 +7,14 @@ const Main = () => {
     <div className="main">
       <nav className="nav">
         <div className="main-logo">
-          <img className="nav-images" src="/images/instagram.png" />
+          <img className="nav-images" src="/images/hyoeunJung/instagram.png" />
           <h3 className="nav-font">WESTAGRAM</h3>
         </div>
         <input className="nav-input" type="text" placeholder="검색" />
         <div className="imgsElements">
-          <img className="nav-images" src="/images/compass.png" />
-          <img className="nav-images" src="/images/heart.png" />
-          <img className="nav-images" src="/images/user.png" />
+          <img className="nav-images" src="/images/hyoeunJung/compass.png" />
+          <img className="nav-images" src="/images/hyoeunJung/heart.png" />
+          <img className="nav-images" src="/images/hyoeunJung/user.png" />
         </div>
       </nav>
       <main>
@@ -25,7 +25,7 @@ const Main = () => {
             <div className="user-name">
               <img
                 className="top-user"
-                src="/images/sand2.png"
+                src="/images/hyoeunJung/sand2.png"
                 alt="동그란이미지사진"
               />
               <div>
@@ -33,15 +33,15 @@ const Main = () => {
                 <p>wecode-위코드</p>
               </div>
             </div>
-            <img src="/images/forward.png" />
+            <img src="/images/hyoeunJung/forward.png" />
           </div>
-          <img className="sand" src="/images/sand1.png" />
+          <img className="sand" src="/images/hyoeunJung/sand1.png" />
 
           {/* 피드 밑 아이콘 */}
           <div className="imgsElements">
-            <img className="images" src="/images/heart.png" />
-            <img className="images" src="/images/msg.png" />
-            <img className="images" src="/images/download.png" />
+            <img className="images" src="/images/hyoeunJung/heart.png" />
+            <img className="images" src="/images/hyoeunJung/msg.png" />
+            <img className="images" src="/images/hyoeunJung/download.png" />
           </div>
 
           {/*피드 아이곤 아래 좋아합니다 부분*/}
