@@ -1,0 +1,87 @@
+@import '../../../style/variables.scss';
+@import '../../../style/reset.scss';
+@font-face {
+	font-family: "Lobster";
+	src: url('../assets/Lobster-Regular.ttf');
+}
+
+$point-color-blue: rgba(47, 170, 249, 1);
+$grey-color-193: rgba(193, 193, 193, 1);
+$grey-color-border: rgba(219, 219, 219, 1);
+$grey-color-bg: rgba(250, 250, 250, 1);
+
+
+body {
+  font-size: 14px;
+}
+input {
+  outline: none;
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .box {
+    width: 400px;
+    padding: 40px 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgb(219, 219, 219);
+
+    h1 {
+      font-size:40px;
+      font-family: 'Lobster';
+    }
+
+    .input-txt {
+      width: 300px;
+  
+      input {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px 0 10px 5px;
+        background-color: $grey-color-bg;
+        border-radius: 3px;
+        border: 1px solid $grey-color-border;
+  
+        &::placeholder{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+  
+.login-btn {
+  margin-top: 20px;
+
+  button {
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 8px;
+    border: 0px;
+    font-weight: bold;
+    color: #fff;
+    background-color: $point-color-blue;
+    cursor: pointer;
+  }
+}
+
+
+.findPw {
+  text-align: center;
+  margin: 60px 0;
+
+  a {
+    font-size: 9px;
+    color: rgb(0, 55, 107);
+    text-decoration: none;
+  }
+}
