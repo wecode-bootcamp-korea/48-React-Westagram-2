@@ -4,14 +4,13 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [inputId, setInputId] = useState();
-  const [inputPw, setInputPw] = useState();
+  const [inputId, setInputId] = useState("");
+  const [inputPw, setInputPw] = useState("");
 
   const saveUserId = (event) => {
     setInputId(event.target.value);
-    console.log(inputId);
   };
-
+  console.log(inputId);
   const saveUserPw = (event) => {
     setInputPw(event.target.value);
     console.log(inputPw);
@@ -20,32 +19,38 @@ const Login = () => {
   const goToMain = () => {
     navigate("/hyoeunjung-main");
   };
+  const isInputValue = inputId.includes("@") && inputPw.length >= 5;
 
   return (
-    <div className="login-container">
+    <div className="loginContainer">
       <div className="logo">westagram</div>
       <div className="form">
         <input
-          className="input-wrap"
+          className="inputWrap"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
           onChange={saveUserId}
           value={inputId}
         ></input>
         <input
-          className="input-wrap"
+          className="inputWrap"
           type="password"
           placeholder="비밀번호"
           onChange={saveUserPw}
           value={inputPw}
         ></input>
       </div>
-      <div className="btn-login">
-        <button className="btn" type="button" onClick={goToMain}>
+      <div className="btnLogin">
+        <button
+          className={isInputValue ? "btn active" : "btn"}
+          type="button"
+          onClick={goToMain}
+          disabled={!isInputValue}
+        >
           로그인
         </button>
-        <div className="re-password-wrap">
-          <a className="re-password" href="#">
+        <div className="rePasswordWrap">
+          <a className="rePassword" href="#">
             비밀번호를 잊으셨나요?
           </a>
         </div>
