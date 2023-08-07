@@ -17,10 +17,9 @@ const Main = () => {
           <img className="nav-images" src="/images/hyoeunJung/user.png" />
         </div>
       </nav>
+
       <main>
-        <div>
-          {/* 왼쪽편 */}
-          {/* 피드이미지 */}
+        <div className="leftfeed">
           <div className="top-wrap">
             <div className="user-name">
               <img
@@ -35,31 +34,44 @@ const Main = () => {
             </div>
             <img src="/images/hyoeunJung/forward.png" />
           </div>
-          <img className="sand" src="/images/hyoeunJung/sand1.png" />
+          <img className="feed-image" src="/images/hyoeunJung/sand1.png" />
 
           {/* 피드 밑 아이콘 */}
           <div className="imgsElements">
-            <img className="images" src="/images/hyoeunJung/heart.png" />
-            <img className="images" src="/images/hyoeunJung/msg.png" />
-            <img className="images" src="/images/hyoeunJung/download.png" />
+            <img className="feed-images" src="/images/hyoeunJung/heart.png" />
+            <img className="feed-images" src="/images/hyoeunJung/msg.png" />
+            <img
+              className="feed-images"
+              src="/images/hyoeunJung/download.png"
+            />
           </div>
 
           {/*피드 아이곤 아래 좋아합니다 부분*/}
 
-          <div>
-            <img src="" alt="동그란사진" />
-            <p>님 외 4명이좋아합니다</p>
+          <div className="img-wrap">
+            <img
+              className="like-image"
+              src="/images/hyoeunJung/sand4.png"
+              alt="동그란사진"
+            />
+            <p>sand님 외 4명이좋아합니다</p>
             <p>
-              sand ㅇㅁㄴㄹㄴㅁㅇㄹㅇㅁㅇ<a> 더 보기</a>
+              모래 귀여워<a> 더 보기</a>
             </p>
           </div>
-          <input type="text" placeholder="댓글 달기..." />
-          <button>게시</button>
+          <div className="comment">
+            <input type="text" placeholder="댓글 달기..." />
+            <button>게시</button>
+          </div>
         </div>
         {/* 오른쪽부분 */}
         <div>
-          <div>
-            <img src="" alt="동그란사진" />
+          <div className="top-right">
+            <img
+              className="right-user"
+              src="/images/hyoeunJung/sand2.png"
+              alt="동그란사진"
+            />
             <p>wecode_bootcamp</p>
             <p>WeCode위코드</p>
           </div>
