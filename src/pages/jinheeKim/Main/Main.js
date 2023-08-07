@@ -1,7 +1,6 @@
 import React from "react";
 import "../../../style/reset.scss";
 import "../../../style/common.scss";
-import "../../../style/variables.scss"
 import "./Main.scss";
 import compass from "../assets/icon/compass.png";
 import heart from "../assets/icon/heart.png";
@@ -20,7 +19,7 @@ import TextareaAutosize from 'react-textarea-autosize';
 const Main = () => {
   return (
     <>
-        <nav>
+        <nav className="nav">
             <div className="nav-left">
                 <img className="nav-icon icon-instagram" alt="." src={instagram}/>
                 <span className="logo">Westagram</span>

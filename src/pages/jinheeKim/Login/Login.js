@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import "../../../style/reset.scss";
 import "../../../style/common.scss";
 import "../../../style/variables.scss"
@@ -7,6 +7,11 @@ import "./Login.scss";
 
 
 const Login = () => {
+  const navigate = useNavigate();
+  const goToMain = () => {
+    navigate('/jinheekim-main');
+  }
+
   const [id, setId] = useState('');
   const saveUserId = (event) => {
     setId(event.target.value);
@@ -17,8 +22,10 @@ const Login = () => {
   const saveUserPw = (event) => {
     setPw(event.target.value);
     console.log(pw);
-};
+  };
   
+  const isValue = id.includes('@') && pw.length > 5;
+
 
   return (
     <div className="login">
@@ -37,13 +44,11 @@ const Login = () => {
             className="pw"
             placeholder="비밀번호"
             />
-          <div className="login-btn">
-            <Link to="/jinheekim-main"><button>로그인</button></Link>
-          </div>
+          <button type="button" onClick={goToMain} className={isValue ? "abled-button" : 'disabled-button'} disabled={isValue ? false : true}>로그인</button>
           <div className="findPw">
             <a href="#">비밀번호를 잊으셨나요?</a>
           </div>
-        </div>
+        </div>                                                                                                                                      
       </div>
     </div>
   );

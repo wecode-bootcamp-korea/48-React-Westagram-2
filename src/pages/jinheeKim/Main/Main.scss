@@ -32,10 +32,10 @@ input {
     margin-left: 0;
   }
 }
-nav {
+.nav {
+  display: flex;
   width: 860px;
   margin: 0 auto;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 0;

@@ -59,19 +59,28 @@ input {
   }
 }
   
-.login-btn {
-  margin-top: 20px;
-
-  button {
+@mixin button-style {
+    margin-top: 20px;
+    display: inline-block;
     width: 100%;
+    text-align: center;
+    text-decoration-line: none;
     padding: 8px 0;
     border-radius: 8px;
     border: 0px;
     font-weight: bold;
     color: #fff;
-    background-color: $point-color-blue;
     cursor: pointer;
   }
+
+.abled-button {
+  @include button-style;
+  background-color: $point-color-blue;
+}
+
+.disabled-button {
+  @include button-style;
+  background-color: #666;
 }
 
 
