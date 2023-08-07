@@ -7,13 +7,18 @@ import "./Login.scss";
 
 
 const Login = () => {
-  const saveUserId = (e) => {
+  const [id, setId] = useState('');
+  const saveUserId = (event) => {
+    setId(event.target.value);
+    console.log(id);
 };
-  const [id, setId] = useState('event.target.value');
-
-  const saveUserPw = (e) => {
+  
+  const [pw, setPw] = useState('');
+  const saveUserPw = (event) => {
+    setPw(event.target.value);
+    console.log(pw);
 };
-  const [pw, setPw] = useState('event.target.value');
+  
 
   return (
     <div className="login">
