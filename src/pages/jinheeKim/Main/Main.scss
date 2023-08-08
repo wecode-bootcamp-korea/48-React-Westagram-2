@@ -80,7 +80,7 @@ input {
   }
 }
 
-
+.bold {font-weight: bold;}
 .main {
   width: 100%;
   height: 100vh;
@@ -89,6 +89,10 @@ input {
   padding: 80px 40px;
   background-color: $grey-color-bg;
   border-top: 2px solid black;
+  
+  .username {
+    font-weight: bold;
+  }
 
   .feeds {
     border: 1px solid $grey-color-border;
@@ -109,12 +113,7 @@ input {
     margin-left: 15px;
     justify-content: center;
     flex-direction: column;
-
-    .username {
-      font-weight: bold;
-    }
   }
-
   .location, .username2 {
     font-size: 12px;
     color: gray;
@@ -177,7 +176,7 @@ input {
         margin-top: 10px;
       }
 
-      button {
+      .comment-button {
         position: absolute;
         right: 0;
         bottom: 10px;
@@ -202,10 +201,6 @@ input {
         outline: none;
       }
     }
-  }
-
-  span.bold {
-    font-weight: bold;
   }
   
   .main-right {

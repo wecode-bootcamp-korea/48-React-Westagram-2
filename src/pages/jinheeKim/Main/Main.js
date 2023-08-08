@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "../../../style/reset.scss";
 import "../../../style/common.scss";
 import "./Main.scss";
@@ -17,6 +17,21 @@ import follower from "../assets/images/bf.jpg";
 import TextareaAutosize from 'react-textarea-autosize';
 
 const Main = () => {
+  const [comment, setComment] = useState('');
+  const saveComment = (event) => {
+    setComment(event.target.value);
+  };
+  const [commentArray, setCommentArray] = useState([]);
+
+  const onSubmit = event => {
+    event.preventDefault();
+    if (comment === '') {
+      return;
+    }
+    setCommentArray(commentList => [comment, ...commentList]);
+    setComment('');
+  };
+
   return (
     <>
         <nav className="nav">
@@ -61,21 +76,30 @@ const Main = () => {
                   </div>
                 </div>
                 <div className="like">
-                  <div className="photo"><img src={follower} alt="."/></div> <span className="bold">ㅌㅌ</span>님 외<span className="bold">&nbsp;0명</span>이 좋아합니다.
+                  <div className="photo"><img src={follower} alt="."/></div> <span className="username">ㅌㅌ</span>님 외<span className="bold">&nbsp;0명</span>이 좋아합니다.
                 </div>
                 <div className="description">
-                  <p><span className="bold">jini</span> 또 놀러가고 싶다. 취업하고 놀아야지.</p>
+                  <p><span className="username">jini</span> 또 놀러가고 싶다. 취업하고 놀아야지.</p>
                 </div>
-                <div className="comment">
-                  <p><span className="bold">이름</span> 댓글내용주절주절😊</p>
-                  <p><span className="bold">이름</span> 댓글내용주절😊</p>
-                  <p class="write-time">42초 전</p>
-                  <TextareaAutosize
-                    className="comment-box"
-                    placeholder="댓글달기 .."
-                    cacheMeasurements />
-                    <button>게시</button>
-                </div>
+                <form className="comment" onSubmit={onSubmit}>
+                    {commentArray.map((value, user) => (
+                        <p key={user} className="comment-list">
+                            <span className="username">이름</span> {value}
+                        </p>
+                    ))}
+                    <p className="write-time">42초 전</p>
+                    <div className="comment-container">
+                        <TextareaAutosize
+                            type="text"
+                            className="comment-box"
+                            placeholder="댓글달기 .."
+                            value={comment}
+                            onChange={saveComment}
+                            cacheMeasurements
+                        />
+                        <button type="submit" className="comment-button">게시</button>
+                    </div>
+                </form>
               </div>
             </article>
           </div>
