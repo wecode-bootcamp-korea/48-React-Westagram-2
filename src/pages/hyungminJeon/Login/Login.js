@@ -22,7 +22,6 @@ const Login = () => {
   };
 
   const handleInput = (event) => {
-    console.log(event);
     const { value, id } = event.target;
     setUserInfo({ ...userInfo, [id]: value });
   };
@@ -31,34 +30,43 @@ const Login = () => {
 
   return (
     <div className="login">
-      <div className="box_border">
-        <button className="logo_btn" onClick={goToNoLogin}>
+      <div className="boxBorder">
+        <button className="logoBtn" onClick={goToNoLogin}>
           <img
             src="/images/hyungminJeon/logo_instagram.png"
             className="logo"
             alt="logo"
           />
         </button>
-        <div className="info_box">
+        <div className="infoBox">
           <input
             id="userId"
             type="text"
-            className="text_box"
+            className="textBox"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             onChange={handleInput}
           />
           <input
             id="userPw"
             type="text"
-            className="text_box"
+            className="textBox"
             placeholder="비밀번호"
             onChange={handleInput}
           />
-          <button className="login_click" type="button" onClick={goToMain}>
+          <button
+            className="loginClick"
+            type="button"
+            onClick={goToMain}
+            style={{
+              backgroundColor: isActive
+                ? "rgb(119, 119, 255)"
+                : "rgb(154, 199, 255)",
+            }}
+          >
             로그인
           </button>
         </div>
-        <div className="forgot_password">
+        <div className="forgotPassword">
           <Link to="/password">비밀번호를 잊으셨나요?</Link>
         </div>
       </div>

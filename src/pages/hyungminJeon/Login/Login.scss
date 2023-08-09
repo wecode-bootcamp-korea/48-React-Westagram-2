@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
 
-  .box_border {
+  .boxBorder {
     height: 450px;
     width: 400px;
     margin: auto;
@@ -15,7 +15,7 @@
     justify-content: space-between;
     align-items: center;
 
-    .logo_btn {
+    .logoBtn {
       margin: 60px auto 0;
       width: 175px;
       height: 70;
@@ -31,13 +31,13 @@
       }
     }
 
-    .info_box {
+    .infoBox {
       width: 300px;
       margin-bottom: 20%;
       display: flex;
       flex-direction: column;
 
-      .text_box {
+      .textBox {
         width: 94%;
         margin-bottom: 3%;
         padding: 3%;
@@ -45,27 +45,22 @@
         background-color: rgb(245, 245, 245);
       }
 
-      .login_click {
+      .loginClick {
         display: flex;
         width: 300px;
         height: 30px;
         margin-top: 2%;
         border-radius: 5px;
         border: 0px;
-        background-color: rgb(154, 199, 255);
         justify-content: center;
         align-items: center;
         color: white;
         font-style: bold;
-
-        &:hover {
-          background-color: rgb(119, 119, 255);
-        }
       }
     }
+  }
 
-    .forgot_password {
-      margin-bottom: 30px;
-    }
+  .forgotPassword {
+    margin-bottom: 30px;
   }
 }

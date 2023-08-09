@@ -7,6 +7,7 @@ import LoginHyoeunJung from "./pages/hyoeunJung/Login/Login";
 // hyungmin Jeon 의 컴포넌트
 import MainHyungminJeon from "./pages/hyungminJeon/Main/Main";
 import LoginHyungminJeon from "./pages/hyungminJeon/Login/Login";
+import PasswordHyungminJeon from "./pages/hyungminJeon/Login/Password";
 
 // jinhee Kim 의 컴포넌트
 import MainJinheeKim from "./pages/jinheeKim/Main/Main";
@@ -22,8 +23,13 @@ const Router = () => {
       <Routes>
         <Route path="/hyoeunjung-main" element={<MainHyoeunJung />} />
         <Route path="/hyoeunjung-login" element={<LoginHyoeunJung />} />
-        <Route path="/hyungminjeon-main" element={<MainHyungminJeon />} />
-        <Route path="/hyungminjeon-login" element={<LoginHyungminJeon />} />
+        <Route path="/hyungminJeon-main" element={<MainHyungminJeon />} />
+        <Route
+          path="/hyungminJeon-password"
+          element={<PasswordHyungminJeon />}
+        />
+        <Route path="/" element={<LoginHyungminJeon />} />
+        {/* hyungminJeon-login */}
         <Route path="/jinheekim-main" element={<MainJinheeKim />} />
         <Route path="/jinheekim-login" element={<LoginJinheeKim />} />
         <Route path="/minyoungkang-main" element={<MainMinyoungKang />} />
