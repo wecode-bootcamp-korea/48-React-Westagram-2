@@ -158,18 +158,19 @@ input {
     }
 
     .comment {
-      position: relative;
       margin-top: 10px;
 
       .writeTime {
         color: grey;
         margin-top: 10px;
       }
-
+      .commentContainer{
+        position: relative;
+      }
       .commentButton {
         position: absolute;
         right: 0;
-        bottom: 10px;
+        top: 20px;
         border: none;
         background-color: inherit;
         color: grey;

@@ -26,19 +26,21 @@ const INFO_LIST = [
 ];
 
 const Main = () => {
-  const [comment, setComment] = useState('');
+  const [commentValue, setCommentValue] = useState('');
   const saveComment = (event) => {
-    setComment(event.target.value);
+    setCommentValue(event.target.value);
   };
-  const [commentArray, setCommentArray] = useState([]);
+
+  const [comments, setComments] = useState([]);
 
   const onSubmit = event => {
     event.preventDefault();
-    if (comment === '') {
+    if (commentValue === '') {
+      alert('빈 칸입니다.')
       return;
     }
-    setCommentArray(commentList => [comment, ...commentList]);
-    setComment('');
+    setComments(commentList => [...commentList, commentValue]);
+    setCommentValue('');
   };
 
   return (
@@ -91,20 +93,19 @@ const Main = () => {
                   <p><span className="username">jini</span> 또 놀러가고 싶다. 취업하고 놀아야지.</p>
                 </div>
                 <form className="comment" onSubmit={onSubmit}>
-                    {commentArray.map((value, user) => (
-                        <p key={user} className="commentList">
+                    {comments.map((value, user) => (
+                        <p className="commentList">
                             <span className="username">이름</span> {value}
                         </p>
                     ))}
                     <p className="writeTime">42초 전</p>
                     <div className="commentContainer">
-                        <TextareaAutosize
+                        <textarea
                             type="text"
                             className="commentBox"
                             placeholder="댓글달기 .."
-                            value={comment}
+                            value={commentValue}
                             onChange={saveComment}
-                            cacheMeasurements
                         />
                         <button type="submit" className="commentButton">게시</button>
                     </div>
