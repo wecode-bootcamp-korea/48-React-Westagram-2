@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+p {
+  line-height: 0.5em;
+}
 
 .nav {
   width: 100%;
@@ -50,6 +53,7 @@
     align-items: center;
     .topUser {
       width: 40px;
+      width: 40px;
       border-radius: 50%;
       border: 1px solid rgb(205, 205, 205);
     }
@@ -58,6 +62,7 @@
 .feedImage {
   width: 100%;
   position: relative;
+  z-index: -1;
 }
 .feedImages {
   width: 50px;
@@ -65,6 +70,7 @@
 }
 .likeImage {
   width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: 1px solid rgb(205, 205, 205);
 }
@@ -93,6 +99,7 @@
   align-items: center;
   .rightUser {
     width: 40px;
+    width: 40px;
     border-radius: 50%;
   }
 }
@@ -111,11 +118,10 @@
 .storyBox {
   border: 1px solid rgb(205, 205, 205);
   width: 300px;
+  margin-bottom: 20px;
+  padding: 15px;
 }
-.likeUser {
-  display: flex;
-  flex-direction: column;
-}
+
 .like {
   display: flex;
   align-items: center;
@@ -123,6 +129,7 @@
 .proposeBox {
   border: 1px solid rgb(205, 205, 205);
   width: 300px;
+  padding: 15px;
 }
 .proposeImages {
   width: 40px;
@@ -132,10 +139,6 @@
 .propose {
   display: flex;
   justify-content: space-between;
-}
-.proposeText {
-  display: flex;
-  flex-direction: column;
 }
 
 .proposeImage {
@@ -147,4 +150,22 @@
 }
 .proposeWrap {
   justify-content: space-between;
+}
+.buttonAlign {
+  display: flex;
+  justify-content: space-between;
+}
+.proposeButton {
+  border: 0;
+  background-color: transparent;
+}
+.align {
+  display: flex;
+  justify-content: space-around;
+}
+.rightFeed {
+  margin-top: 80px;
+}
+.reviewArea {
+  margin-left: 20px;
 }

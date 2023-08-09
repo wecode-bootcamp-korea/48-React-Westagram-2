@@ -11,6 +11,7 @@ const Login = () => {
     setInputId(event.target.value);
   };
   console.log(inputId);
+
   const saveUserPw = (event) => {
     setInputPw(event.target.value);
     console.log(inputPw);
@@ -30,14 +31,14 @@ const Login = () => {
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
           onChange={saveUserId}
-          value={inputId}
+          // value={inputId}
         ></input>
         <input
           className="inputWrap"
           type="password"
           placeholder="비밀번호"
           onChange={saveUserPw}
-          value={inputPw}
+          // value={inputPw}
         ></input>
       </div>
       <div className="btnLogin">

@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Main.scss";
 
 const Main = () => {
+  const [commentList, setCommentList] = useState([]);
+  const [comment, setComment] = useState("");
+
+  const handleInputComment = (event) => {
+    setComment(event.target.value);
+  };
+
+  const handleButton = () => {
+    setCommentList([...commentList, comment]);
+  };
+
+  console.log("commnetList", commentList);
   return (
     // nav 바
     <div className="main">
@@ -18,7 +30,7 @@ const Main = () => {
         </div>
       </nav>
 
-      <main>
+      <main className="align">
         <div className="leftfeed">
           <div className="topWrap">
             <div className="userName">
@@ -51,18 +63,41 @@ const Main = () => {
               src="/images/hyoeunJung/sand4.png"
               alt="동그란사진"
             />
-            <p>sand님 외 4명이좋아합니다</p>
-            <p>
-              모래 귀여워<a> 더 보기</a>
-            </p>
+            <div>
+              <p>sand님 외 4명이좋아합니다</p>
+              <p>
+                모래 귀여워<a> 더 보기</a>
+              </p>
+            </div>
+          </div>
+          <div className="reviewArea">
+            {commentList.map((review) => (
+              <p>{review}</p>
+            ))}
           </div>
           <div className="comment">
-            <input type="text" placeholder="댓글 달기..." />
-            <button>게시</button>
+            <input
+              type="text"
+              placeholder="댓글 달기..."
+              onChange={handleInputComment}
+              value={comment}
+            />
+            <button onClick={handleButton} value={commentList}>
+              게시
+            </button>
+
+            {/* {commentList.map((review) => (
+              <p>{review}</p>
+            ))} */}
+
+            {/* <div>{commentList[0]}</div>
+            <div>{commentList[1]}</div>
+            <div>{commentList[2]}</div>
+            <div>{commentList[3]}</div> */}
           </div>
         </div>
         {/* 오른쪽부분 */}
-        <div>
+        <div className="rightFeed">
           <div className="topRight">
             <img
               className="rightUser"
@@ -78,7 +113,7 @@ const Main = () => {
           <div className="storyBox">
             <div className="likeStory">
               <p>스토리</p>
-              <div>모두 보기</div>
+              <p>모두 보기</p>
             </div>
 
             <div className="like">
@@ -122,22 +157,62 @@ const Main = () => {
               <p>회원님을 위한 추천</p>
               <p>모두 보기</p>
             </div>
-            <div className="proposeWrap">
-              <div className="proposeUser">
-                <div className="proposeImage">
-                  <img
-                    className="proposeImages"
-                    src="/images/hyoeunJung/sand1.png"
-                    alt="동그란사진"
-                  />
-                </div>
+            <div className="buttonAlign">
+              <div className="proposeWrap">
+                <div className="proposeUser">
+                  <div className="proposeImage">
+                    <img
+                      className="proposeImages"
+                      src="/images/hyoeunJung/sand1.png"
+                      alt="동그란사진"
+                    />
+                  </div>
 
-                <div className="proposeText">
-                  <p>im</p>
-                  <p>oo님 외 3명이 팔...</p>
+                  <div className="proposeText">
+                    <p>im</p>
+                    <p>oo님 외 3명이 팔...</p>
+                  </div>
                 </div>
               </div>
-              <button>팔로우</button>
+              <button className="proposeButton">팔로우</button>
+            </div>
+            <div className="buttonAlign">
+              <div className="proposeWrap">
+                <div className="proposeUser">
+                  <div className="proposeImage">
+                    <img
+                      className="proposeImages"
+                      src="/images/hyoeunJung/sand1.png"
+                      alt="동그란사진"
+                    />
+                  </div>
+
+                  <div className="proposeText">
+                    <p>im</p>
+                    <p>oo님 외 3명이 팔...</p>
+                  </div>
+                </div>
+              </div>
+              <button className="proposeButton">팔로우</button>
+            </div>
+            <div className="buttonAlign">
+              <div className="proposeWrap">
+                <div className="proposeUser">
+                  <div className="proposeImage">
+                    <img
+                      className="proposeImages"
+                      src="/images/hyoeunJung/sand1.png"
+                      alt="동그란사진"
+                    />
+                  </div>
+
+                  <div className="proposeText">
+                    <p>im</p>
+                    <p>oo님 외 3명이 팔...</p>
+                  </div>
+                </div>
+              </div>
+              <button className="proposeButton">팔로우</button>
             </div>
           </div>
         </div>
