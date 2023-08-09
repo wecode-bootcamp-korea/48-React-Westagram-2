@@ -12,13 +12,13 @@ input {
   outline: none;
 }
 
-.nav-icon {
+.navIcon {
   width: 24px;
   margin-left: 20px;
 }
 
-.nav-left{
-  .icon-instagram {
+.navLeft{
+  .iconInstagram {
     margin-left: 0;
   }
 }
@@ -37,12 +37,12 @@ input {
     padding-left: 20px;
   }
 }
-.nav-left, .search-bar, .nav-right{
+.navLeft, .searchBar, .navRight{
   display: flex;
   align-items: center;
 }
 
-.search-bar {
+.searchBar {
   width: 300px;
   background-color: $grey-color-bg;
   border: 1px solid $grey-color-border;
@@ -51,7 +51,7 @@ input {
   justify-content: center;
   align-items: center;
 
-  .search-box {
+  .searchBox {
     width: 50px;
     padding : 8px 0;
     border: none;
@@ -65,7 +65,7 @@ input {
     }
   }
 
-  .icon-search {
+  .iconSearch {
     width: 16px;
   }
 }
@@ -88,11 +88,11 @@ input {
     border: 1px solid $grey-color-border;
     background-color: white;
 
-    .feed-img img {
+    .feedImg img {
       width: 468px;
     }
   }
-  .feeds-top, .main-right-top {
+  .feedsTop, .mainRightTop {
     display: flex;
     align-items: stretch;
     padding: 15px;
@@ -129,7 +129,7 @@ input {
     }
   }
   
-  .feeds-bottom {
+  .feedsBottom {
     padding: 10px;
 
     .photo img {
@@ -144,15 +144,15 @@ input {
       display: inline-flex;
     }
 
-    .feeds-bottom-icons {
+    .feedsBottomIcons {
       display: flex;
       justify-content: space-between;
 
-      .bottom-right > .nav_icon {
+      .bottomRight > .navIcon {
         margin-left:0;
       }
 
-      .bottom-left .nav-icon:first-child {
+      .bottomLeft .navIcon:first-child {
         margin-left: 0;
       }
     }
@@ -161,12 +161,12 @@ input {
       position: relative;
       margin-top: 10px;
 
-      .write-time {
+      .writeTime {
         color: grey;
         margin-top: 10px;
       }
 
-      .comment-button {
+      .commentButton {
         position: absolute;
         right: 0;
         bottom: 10px;
@@ -180,7 +180,7 @@ input {
       margin-top: 20px;
     }
 
-    .comment-box {
+    .commentBox {
       width: 100%;
       resize: none;
       margin-top: 20px;
@@ -193,7 +193,7 @@ input {
     }
   }
   
-  .main-right {
+  .mainRight {
     width: 300px;
     padding: 0 20px;
 
@@ -205,7 +205,7 @@ input {
       overflow: hidden;
     }
     
-    .stories-top {
+    .storiesTop {
       display: flex;
       justify-content: space-between;
       font-size: 12px;
@@ -219,7 +219,7 @@ input {
         color: grey;
       }
 
-      .story-people {
+      .storyPeople {
         display: flex;
         position: relative;
         margin-top: 15px;

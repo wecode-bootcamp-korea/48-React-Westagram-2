@@ -44,24 +44,24 @@ const Main = () => {
   return (
     <>
         <nav className="nav">
-            <div className="nav-left">
-                <img className="nav-icon icon-instagram" alt="." src={instagram}/>
+            <div className="navLeft">
+                <img className="navIcon iconInstagram" alt="." src={instagram}/>
                 <span className="logo">Westagram</span>
             </div>
-            <div className="search-bar">
-              <img className="icon-search" alt="." src={search}/>
-              <input className="search-box" type="text" aria-label="검색창" placeholder="검색" />
+            <div className="searchBar">
+              <img className="iconSearch" alt="." src={search}/>
+              <input className="searchBox" type="text" aria-label="검색창" placeholder="검색" />
             </div>
-            <div className="nav-right">
-              <img className="nav-icon" alt="." src={compass}/>
-              <img className="nav-icon" alt="." src={heart}/>
-              <img className="nav-icon" alt="." src={user}/>
+            <div className="navRight">
+              <img className="navIcon" alt="." src={compass}/>
+              <img className="navIcon" alt="." src={heart}/>
+              <img className="navIcon" alt="." src={user}/>
             </div>
         </nav>
         <div className="main">
           <div className="feeds">
             <article>
-              <div className="feeds-top">
+              <div className="feedsTop">
                 <div className="photo">
                   <img src={userimg} alt="."></img>
                 </div>
@@ -70,18 +70,18 @@ const Main = () => {
                   <p className="location">제주도</p>
                 </div>
               </div>
-              <div className="feed-img">
+              <div className="feedImg">
                   <img src={feedimg} alt="."></img>
               </div>
-              <div className="feeds-bottom">
-                <div className="feeds-bottom-icons">
-                  <div className="bottom-left">
-                    <img className="nav-icon" alt="." src={heart_click}/>
-                    <img className="nav-icon" alt="." src={chat}/>
-                    <img className="nav-icon" alt="." src={share}/>
+              <div className="feedsBottom">
+                <div className="feedsBottomIcons">
+                  <div className="bottomLeft">
+                    <img className="navIcon" alt="." src={heart_click}/>
+                    <img className="navIcon" alt="." src={chat}/>
+                    <img className="navIcon" alt="." src={share}/>
                   </div>
-                  <div className="bottom-right">
-                    <img className="nav-icon" alt="." src={bookmark}/>
+                  <div className="bottomRight">
+                    <img className="navIcon" alt="." src={bookmark}/>
                   </div>
                 </div>
                 <div className="like">
@@ -92,28 +92,28 @@ const Main = () => {
                 </div>
                 <form className="comment" onSubmit={onSubmit}>
                     {commentArray.map((value, user) => (
-                        <p key={user} className="comment-list">
+                        <p key={user} className="commentList">
                             <span className="username">이름</span> {value}
                         </p>
                     ))}
-                    <p className="write-time">42초 전</p>
-                    <div className="comment-container">
+                    <p className="writeTime">42초 전</p>
+                    <div className="commentContainer">
                         <TextareaAutosize
                             type="text"
-                            className="comment-box"
+                            className="commentBox"
                             placeholder="댓글달기 .."
                             value={comment}
                             onChange={saveComment}
                             cacheMeasurements
                         />
-                        <button type="submit" className="comment-button">게시</button>
+                        <button type="submit" className="commentButton">게시</button>
                     </div>
                 </form>
               </div>
             </article>
           </div>
-          <div className="main-right">
-            <div className="main-right-top">
+          <div className="mainRight">
+            <div className="mainRightTop">
               <div className="photo">
                 <img src={userimg} alt="."></img>
               </div>
@@ -123,11 +123,11 @@ const Main = () => {
               </div>
             </div>
             <div className="stories">
-              <div className="stories-top">
+              <div className="storiesTop">
                 <p className="story">스토리</p>
                 <p>모두 보기</p>
               </div>
-              <div className="story-people">
+              <div className="storyPeople">
                 <div className="photo">
                   <img src={userimg} alt="."></img>
                 </div>
@@ -136,7 +136,7 @@ const Main = () => {
                   <p className="username2">지니지니</p>
                 </div>
               </div>
-              <div className="story-people">
+              <div className="storyPeople">
                 <div className="photo">
                   <img src={userimg} alt="."></img>
                 </div>
@@ -145,7 +145,7 @@ const Main = () => {
                   <p className="username2">지니지니</p>
                 </div>
               </div>
-              <div className="story-people">
+              <div className="storyPeople">
                 <div className="photo">
                   <img src={userimg} alt="."></img>
                 </div>
@@ -154,7 +154,7 @@ const Main = () => {
                   <p className="username2">지니지니</p>
                 </div>
               </div>
-              <div className="story-people">
+              <div className="storyPeople">
                 <div className="photo">
                   <img src={userimg} alt="."></img>
                 </div>
@@ -165,11 +165,11 @@ const Main = () => {
               </div>
             </div>
             <div className="recommend">
-              <div className="stories-top">
+              <div className="storiesTop">
                 <p className="story">회원님을 위한 추천</p>
                 <p>모두 보기</p>
               </div>
-              <div className="story-people">
+              <div className="storyPeople">
                 <div className="photo">
                   <img src={userimg} alt="."></img>
                 </div>
@@ -179,7 +179,7 @@ const Main = () => {
                 </div>
                 <button>팔로우</button>
               </div>
-              <div className="story-people">
+              <div className="storyPeople">
                 <div className="photo">
                   <img src={userimg} alt="."></img>
                 </div>
@@ -189,7 +189,7 @@ const Main = () => {
                 </div>
                 <button>팔로우</button>
               </div>
-              <div className="story-people">
+              <div className="storyPeople">
                 <div className="photo">
                   <img src={userimg} alt="."></img>
                 </div>
@@ -199,7 +199,7 @@ const Main = () => {
                 </div>
                 <button>팔로우</button>
               </div>
-              <div className="story-people">
+              <div className="storyPeople">
                 <div className="photo">
                   <img src={userimg} alt="."></img>
                 </div>
