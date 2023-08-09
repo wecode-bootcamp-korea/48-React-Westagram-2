@@ -1,5 +1,16 @@
 import React, { useState } from "react";
 import "./Main.scss";
+//상수 : 파일분리 시도했으나 실패ㅜ
+const FOOTER_INFO = [
+  { id: 1, link: "https://www.instagram.com", text: "instagram정보 " },
+  { id: 2, link: "https://www.instagram.com", text: "지원 " },
+  { id: 3, link: "https://www.instagram.com", text: "홍보센터 " },
+  { id: 4, link: "https://www.instagram.com", text: "API " },
+  { id: 5, link: "https://www.instagram.com", text: "채용정보 " },
+  { id: 6, link: "https://www.instagram.com", text: "개인정보처리방침 " },
+  { id: 7, link: "https://www.instagram.com", text: "약관 " },
+  { id: 8, link: "https://www.instagram.com", text: "디렉터리 " },
+];
 
 const Main = () => {
   const [commentList, setCommentList] = useState([]);
@@ -214,6 +225,15 @@ const Main = () => {
               </div>
               <button className="proposeButton">팔로우</button>
             </div>
+          </div>
+          <div className="footerBar">
+            {FOOTER_INFO.map((info) => (
+              <span key={info.id}>
+                <a className="footerDeco" href={info.link}>
+                  {info.text}
+                </a>
+              </span>
+            ))}
           </div>
         </div>
       </main>
