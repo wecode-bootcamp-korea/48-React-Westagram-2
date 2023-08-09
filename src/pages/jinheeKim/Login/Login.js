@@ -11,28 +11,6 @@ const Login = () => {
   const goToMain = () => {
     navigate('/jinheekim-main');
   }
-  /*
-  const [id, setId] = useState('');
-  const [pw, setPw] = useState('');
-  const saveUserId = (event) => {
-    setId(event.target.value);
-};
-  const saveUserPw = (event) => {
-    setPw(event.target.value);
-  };
-  위 두 줄을 아래처럼 하나로 묶음
-  */
-
-  /*const saveUserId = (event) => {
-    const {value} = event.target;
-    setUserInfo({...userInfo, id:value});
-  };
-  
-  const saveUserPw = (event) => {
-    const {value} = event.target;
-    setUserInfo({...userInfo, pw:value});
-  };*/
-
 
   const [userInfo, setUserInfo] = useState({
     userId:"아이디",
@@ -44,18 +22,13 @@ const Login = () => {
     setUserInfo({...userInfo, [id]:value});
   };
 
-
-  // ...userInfo > 스프레드연산자. userInfo는 객체. id, pw 키를 갖고 있음. 이를 분해
-  // 중복되는 키는 오른쪽 새로운 value 값으로 변경됨. > id가 ""에서 value로 변경.
-
-
   const isValue = userInfo.userId.includes('@') && userInfo.userPw.length >= 5;
 
   return (
     <div className="login">
       <div className="box">
         <h1>Westagram</h1>
-        <div className="input-txt">
+        <div className="inputTxt">
           <input
             id="userId"
             onChange={handleInput}

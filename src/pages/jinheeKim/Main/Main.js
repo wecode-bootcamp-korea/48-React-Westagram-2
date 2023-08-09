@@ -1,6 +1,4 @@
 import React, {useState} from "react";
-import "../../../style/reset.scss";
-import "../../../style/common.scss";
 import "./Main.scss";
 import compass from "../assets/icon/compass.png";
 import heart from "../assets/icon/heart.png";
@@ -15,6 +13,17 @@ import bookmark from "../assets/icon/bookmark-white.png";
 import chat from "../assets/icon/chat.png";
 import follower from "../assets/images/bf.jpg";
 import TextareaAutosize from 'react-textarea-autosize';
+
+const INFO_LIST = [
+  {id: 1, link: "https://instargram.com", text: "소개"},
+  {id: 1, link: "https://instargram.com", text: "소개"},
+  {id: 1, link: "https://instargram.com", text: "소개"},
+  {id: 1, link: "https://instargram.com", text: "소개"},
+  {id: 1, link: "https://instargram.com", text: "소개"},
+  {id: 1, link: "https://instargram.com", text: "소개"},
+  {id: 1, link: "https://instargram.com", text: "소개"},
+
+];
 
 const Main = () => {
   const [comment, setComment] = useState('');
@@ -203,17 +212,9 @@ const Main = () => {
             </div>
             <div>
               <ul>
-                <li>Westagram정보&nbsp;&nbsp;</li>
-                <li>지원&nbsp;&nbsp;</li>
-                <li>홍보센터&nbsp;&nbsp;</li>
-                <li>API&nbsp;&nbsp;</li>
-                <li>채용정보&nbsp;&nbsp;</li>
-                <li>개인정보처리방침&nbsp;&nbsp;</li>
-                <li>약관&nbsp;&nbsp;</li>
-                <li>디렉터리&nbsp;&nbsp;</li>
-                <li>프로필&nbsp;&nbsp;</li>
-                <li>해시태그&nbsp;&nbsp;</li>
-                <li>언어&nbsp;&nbsp;</li>
+                {INFO_LIST.map((info) => {
+                  return (<li key={info.id}><a href="{info.link}">{info.text}</a></li>);
+                })}
               </ul> 
               <p className="copyright">ⓒ 2023 WESTAGRAM</p>
             </div>
