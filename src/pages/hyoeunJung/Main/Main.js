@@ -1,16 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Main.scss";
-//상수 : 파일분리 시도했으나 실패ㅜ
-const FOOTER_INFO = [
-  { id: 1, link: "https://www.instagram.com", text: "instagram정보 " },
-  { id: 2, link: "https://www.instagram.com", text: "지원 " },
-  { id: 3, link: "https://www.instagram.com", text: "홍보센터 " },
-  { id: 4, link: "https://www.instagram.com", text: "API " },
-  { id: 5, link: "https://www.instagram.com", text: "채용정보 " },
-  { id: 6, link: "https://www.instagram.com", text: "개인정보처리방침 " },
-  { id: 7, link: "https://www.instagram.com", text: "약관 " },
-  { id: 8, link: "https://www.instagram.com", text: "디렉터리 " },
-];
+import FOOTER_DATA from "./footerData";
 
 const Main = () => {
   const [commentList, setCommentList] = useState([]);
@@ -24,7 +14,15 @@ const Main = () => {
     setCommentList([...commentList, comment]);
   };
 
-  console.log("commnetList", commentList);
+  //mock data 구현시도
+  useEffect(() => {
+    fetch("/data/feedsData.json", {})
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+  }, []);
+
   return (
     // nav 바
     <div className="main">
@@ -227,7 +225,7 @@ const Main = () => {
             </div>
           </div>
           <div className="footerBar">
-            {FOOTER_INFO.map((info) => (
+            {FOOTER_DATA.map((info) => (
               <span key={info.id}>
                 <a className="footerDeco" href={info.link}>
                   {info.text}

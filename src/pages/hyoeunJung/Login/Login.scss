@@ -11,6 +11,7 @@
   width: 700px;
   margin: 50px auto;
   border: 1px solid rgb(205, 205, 205);
+
   .logo {
     font-family: Lobster;
     text-align: center;
@@ -18,11 +19,13 @@
     margin: 50px 50px;
     padding: 15px;
   }
+
   .form {
     // @include flexSort("column", "center");이거왜안돼
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .inputWrap {
       font-size: 20px;
       margin-top: 15px;
@@ -36,10 +39,12 @@ input {
   border-radius: 8px;
   padding: 10px;
 }
+
 .btnLogin {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   .btn {
     width: 70%;
     margin: 30px;
@@ -50,16 +55,20 @@ input {
     background-color: gray;
     border: none;
     font-size: 20px;
+
     .btn-deco {
       text-decoration: none;
       color: white;
     }
   }
+
   .active {
     background-color: #5ed3f2;
   }
+
   .rePasswordWrap {
     margin: 100px 20px;
+
     .rePassword {
       text-decoration: none;
     }

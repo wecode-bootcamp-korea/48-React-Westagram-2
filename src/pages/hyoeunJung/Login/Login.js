@@ -10,15 +10,37 @@ const Login = () => {
   const saveUserId = (event) => {
     setInputId(event.target.value);
   };
-  console.log(inputId);
 
   const saveUserPw = (event) => {
     setInputPw(event.target.value);
-    console.log(inputPw);
   };
 
   const goToMain = () => {
+    //백엔드랑 연결안했을때 메인페이지로 이동!
     navigate("/hyoeunjung-main");
+    //통신연결
+    // fetch("http://10.58.52.144:3000/users/signup", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     email: inputId,
+    //     password: inputPw,
+    //   }),
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     if (data.accessToken) {
+    //       localStorage.setItem("token", data.accessToken);
+    //       navigate("/hyoeunjung-main");
+    //     }
+    //     console.log(data.message);
+    //     console.log(data.accessToken);
+    //     if (data.message === "specified user does not exist") {
+    //       alert("존재하지 않는 유저입니다.");
+    //     }
+    //   });
   };
   const isInputValue = inputId.includes("@") && inputPw.length >= 5;
 
