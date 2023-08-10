@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+p {
+  line-height: 0.5em;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  border-bottom: 1px solid rgb(205, 205, 205);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  margin: 0 auto;
+
+  .navInput {
+    height: 20px;
+  }
+}
+
+.mainLogo {
+  display: flex;
+
+  .navFont {
+    font-family: Lobster;
+    display: flex;
+  }
+}
+
+.navImages {
+  width: 50px;
+  padding: 10px;
+}
+
+.leftfeed {
+  width: 50%;
+  margin-top: 80px;
+  border: 1px solid black;
+}
+
+.topWrap {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  .userName {
+    display: flex;
+    align-items: center;
+
+    .topUser {
+      width: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: 1px solid rgb(205, 205, 205);
+    }
+  }
+}
+.feedImage {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.feedImages {
+  width: 50px;
+  padding: 5px;
+}
+
+.likeImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgb(205, 205, 205);
+}
+
+.imgWrap {
+  display: flex;
+  margin: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.comment {
+  padding: 10px 0;
+  padding-left: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment input {
+  border: none;
+}
+
+.comment button {
+  border: none;
+  background: none;
+  margin-right: 10px;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+
+  .rightUser {
+    width: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+}
+
+.rightImages {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.likeStory {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.storyBox {
+  border: 1px solid rgb(205, 205, 205);
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+}
+
+.proposeBox {
+  border: 1px solid rgb(205, 205, 205);
+  width: 300px;
+  padding: 15px;
+}
+
+.proposeImages {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.propose {
+  display: flex;
+  justify-content: space-between;
+}
+
+.proposeImage {
+  display: flex;
+  align-items: center;
+}
+
+.proposeUser {
+  display: flex;
+}
+
+.proposeWrap {
+  justify-content: space-between;
+}
+
+.buttonAlign {
+  display: flex;
+  justify-content: space-between;
+}
+
+.proposeButton {
+  border: 0;
+  background-color: transparent;
+}
+
+.align {
+  display: flex;
+  justify-content: space-around;
+}
+
+.rightFeed {
+  margin-top: 80px;
+}
+
+.reviewArea {
+  margin-left: 20px;
+}
+
+.footerBar {
+  width: 300px;
+  margin-top: 20px;
+}
+
+.footerDeco {
+  text-decoration: none;
+  color: gray;
+}
