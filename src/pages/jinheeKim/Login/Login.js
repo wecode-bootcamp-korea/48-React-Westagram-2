@@ -7,15 +7,38 @@ import "./Login.scss";
 
 
 const Login = () => {
+  
+    const [userInfo, setUserInfo] = useState({
+      userId:"아이디",
+      userPw:"패스워드",
+    });
   const navigate = useNavigate();
   const goToMain = () => {
-    navigate('/jinheekim-main');
+    fetch("http://10.58.52.144:3000/users/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: userInfo.userId,
+        password: userInfo.userPw,
+      }),
+    })
+    .then((response) => response.json())
+    .then((result) => {
+      if(result.accessToken) {
+        localStorage.setItem("token", result.accessToken);
+        navigate("/jinheekim-main");
+      }
+      if(result.message === "invalid password") {
+        alert ("비밀번호 틀렸음");
+      };
+      if(result.message === "specified user does not exist") {
+        alert ("아이디 틀렸음");
+      }
+    })
+    
   }
-
-  const [userInfo, setUserInfo] = useState({
-    userId:"아이디",
-    userPw:"패스워드",
-  });
 
   const handleInput = (event) => {
     const {value, id} = event.target;
