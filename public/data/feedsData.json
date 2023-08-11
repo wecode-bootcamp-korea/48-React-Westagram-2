@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "username": "지니1",
+    "userProfile": "images/jinheeKim/test.jpg",
+    "feedImages": "images/jinheeKim/test.jpg",
+    "content": "어쩌고저쩌고"
+  },
+  {
+    "id": 2,
+    "username": "지니2",
+    "userProfile": "images/jinheeKim/test.jpg",
+    "feedImages": "images/jinheeKim/test.jpg",
+    "content": "어쩌고저쩌고어쩌고.."
+  }
+]

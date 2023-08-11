@@ -1,0 +1,264 @@
+@import '../../../style/reset.scss';
+@import '../../../style/variables.scss';
+
+body {
+  font-size: 14px;
+}
+.logo {
+  font-family: "Lobster";
+  src: url(../assets/Lobster-Regular.ttf);
+}
+input {
+  outline: none;
+}
+
+.navIcon {
+  width: 24px;
+  margin-left: 20px;
+}
+
+.navLeft{
+  .iconInstagram {
+    margin-left: 0;
+  }
+}
+.nav {
+  display: flex;
+  width: 860px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+
+  .logo {
+    font-size: 24px;
+    margin-left: 20px;
+    border-left: 1px solid black;
+    padding-left: 20px;
+  }
+}
+.navLeft, .searchBar, .navRight{
+  display: flex;
+  align-items: center;
+}
+
+.searchBar {
+  width: 300px;
+  background-color: $grey-color-bg;
+  border: 1px solid $grey-color-border;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .searchBox {
+    width: 50px;
+    padding : 8px 0;
+    border: none;
+    background-color: $grey-color-bg;
+    text-align: center;
+    margin-left: 10px;
+    overflow: auto;
+    outline: none;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .iconSearch {
+    width: 16px;
+  }
+}
+
+.bold {font-weight: bold;}
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 80px 40px;
+  background-color: $grey-color-bg;
+  border-top: 2px solid black;
+  
+  .username {
+    font-weight: bold;
+  }
+
+  .feeds {
+    border: 1px solid $grey-color-border;
+    background-color: white;
+
+    .feedImg img {
+      width: 468px;
+    }
+  }
+  .feedsTop, .mainRightTop {
+    display: flex;
+    align-items: stretch;
+    padding: 15px;
+  }
+  
+  .name {
+    display: flex;
+    margin-left: 15px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .location, .username2 {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .photo img{
+    width: 50px;
+    border-radius: 100%;
+  }
+  
+  .stories{
+    .photo {
+      background: radial-gradient(circle at bottom left, #F58529 20%, #C42D91);
+      border-radius: 100%;
+      height: 57px;
+      width: 57px;
+  
+      img {
+        box-sizing: content-box;
+        border: 2px solid #fff;
+        margin: 1px;
+      }
+    }
+  }
+  
+  .feedsBottom {
+    padding: 10px;
+
+    .photo img {
+      width: 24px;
+      margin-right: 10px;
+      padding: 1px;
+      border:1px solid rgb(188, 188, 188);
+    }
+
+    .like {
+      margin-top:10px;
+      display: inline-flex;
+    }
+
+    .feedsBottomIcons {
+      display: flex;
+      justify-content: space-between;
+
+      .bottomRight > .navIcon {
+        margin-left:0;
+      }
+
+      .bottomLeft .navIcon:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .comment {
+      margin-top: 10px;
+
+      .writeTime {
+        color: grey;
+        margin-top: 10px;
+      }
+      .commentContainer{
+        position: relative;
+      }
+      .commentButton {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        border: none;
+        background-color: inherit;
+        color: grey;
+      }
+    }
+
+    .description {
+      margin-top: 20px;
+    }
+
+    .commentBox {
+      width: 100%;
+      resize: none;
+      margin-top: 20px;
+      border-style: none;
+      border-bottom: 1px solid grey;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  
+  .mainRight {
+    width: 300px;
+    padding: 0 20px;
+
+    .stories, .recommend {
+      border: 1px solid $grey-color-border;
+      background-color: white;
+      padding: 15px;
+      height: 250px;
+      overflow: hidden;
+    }
+    
+    .storiesTop {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+    }
+
+    .recommend {
+      margin-top: 20px;
+    }
+
+      .story {
+        color: grey;
+      }
+
+      .storyPeople {
+        display: flex;
+        position: relative;
+        margin-top: 15px;
+        
+        button {
+          position: absolute;
+          right: 0;
+          margin-top: 15px;
+          border: none;
+          background-color: inherit;
+          color:  $point-color-blue;
+          font-weight: bold;
+        
+      }
+    }
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      display: inline-block;
+      list-style-type: none;
+      color: $grey-color-193;
+      margin:5px 5px 0;
+    }
+    li:first-child {
+      margin-left: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: $grey-color-193;
+    }
+  }
+
+  .copyright {
+    color: $grey-color-193;
+    margin-top: 10px;
+  }
+}

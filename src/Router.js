@@ -12,9 +12,6 @@ import LoginHyungminJeon from "./pages/hyungminJeon/Login/Login";
 import MainJinheeKim from "./pages/jinheeKim/Main/Main";
 import LoginJinheeKim from "./pages/jinheeKim/Login/Login";
 
-// minyoung Kang 의 컴포넌트
-import MainMinyoungKang from "./pages/minyoungKang/Main/Main";
-import LoginMinyoungKang from "./pages/minyoungKang/Login/Login";
 
 const Router = () => {
 	return (
@@ -26,8 +23,6 @@ const Router = () => {
             <Route path="/hyungminjeon-login" element={<LoginHyungminJeon />} />
             <Route path="/jinheekim-main" element={<MainJinheeKim />} />
             <Route path="/jinheekim-login" element={<LoginJinheeKim />} />
-            <Route path="/minyoungkang-main" element={<MainMinyoungKang />} />
-            <Route path="/minyoungkang-login" element={<LoginMinyoungKang />} />
         </Routes>
     </BrowserRouter>
 	);
